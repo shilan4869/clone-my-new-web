@@ -1,9 +1,10 @@
 import AdsSlider from "./AdsSlider"
+import { memo } from "react"
 
 const HeaderTop = () => {
   return (
-    <div className="hidden lg:flex px-6 bg-blue-700 h-10 items-center justify-center text-sm">
-      <div className="flex justify-between w-[100%] max-w-[1200px] items-center">
+    <div className="hidden lg:flex px-[20px] bg-blue-700 h-[42px] items-center justify-center text-sm">
+      <div className="container">
 
           <AdsSlider/>
         
@@ -37,4 +38,4 @@ const HeaderTop = () => {
   )
 }
 
-export default HeaderTop
+export default memo(HeaderTop)

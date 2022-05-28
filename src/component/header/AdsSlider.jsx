@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState, memo } from "react"
 
 let greeting = [
   <a href="https://divineshop.vn" className="hover:underline ads" key={null}>
@@ -37,8 +37,9 @@ const AdsSlider = () => {
 
   //USE https://scors-anywhere.herokuapp.com TO BYPASS CORS
   useEffect(() => {
+    console.log('fetching...');
     fetch(
-      "https://cors-anywhere.herokuapp.com/https://divineshop.vn/api/header/news"
+      "https://scors-anywhere.herokuapp.com/https://divineshop.vn/api/header/news"
     )
       .then((res) => res.json())
       .then((ads) => {
@@ -85,4 +86,4 @@ const AdsSlider = () => {
   )
 }
 
-export default AdsSlider
+export default memo(AdsSlider)

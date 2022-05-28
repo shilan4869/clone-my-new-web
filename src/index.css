@@ -35,3 +35,12 @@ code {
 .ads {
   -webkit-animation: image_blur_in .5s;
 }
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  gap: 20px;
+}
