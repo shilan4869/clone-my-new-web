@@ -7,22 +7,26 @@ const Menu = () => {
     fetch(myApi)
       .then((res) => res.json())
       .then((data) => {
-          console.log(data);
+          console.log('Menu: ',data);
         const newMenu = data.list.map((v, i) => 
-        <div className="flex items-center cursor-pointer">
+        <a 
+        href={"https://divineshop.vn" + v.href} 
+        className="flex items-center flex-grow rounded-[3px] pl-2 hover:bg-gray-100 cursor-pointer max-h-[30px]"
+        key={i}>
             <img src={"https://cdn.divineshop.vn" + v.icon} 
             loading="lazy"
             alt=""
-            className="h-[18px] w-[18px] opacity-60 mr-[10px]"
+            className=" w-[18px] opacity-60 mr-[10px] "
             />
-            <h3 className="max-w-[200px] text-[1rem] leading-7 overflow-hidden whitespace-nowrap">{v.text}</h3>
-        </div>)
+            <div className="overflow-hidden whitespace-pre text-ellipsis  leading-[24.5px]">{v.text}</div>
+        </a>
+       )
         setMenu(newMenu)
       })
   }, [])
 
   return (
-    <div className="menu hidden lg:block bg-white w-[20%] rounded-[5px] border-[1px] border-gray-200 px-[15px] py-[8px]">
+    <div className="menu hidden lg:flex flex-col justify-between bg-white basis-[20%] rounded-[5px] border-[1px] border-gray-200 p-[8px]  h-full  text-[1rem]">
         {menu}
     </div>
   )

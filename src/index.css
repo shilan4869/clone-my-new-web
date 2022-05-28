@@ -49,3 +49,15 @@ code {
   align-items: center;
   gap: 20px;
 }
+
+.col-4 {
+  flex-basis: calc(25%-15px);
+}
+
+.col-2 {
+  flex-basis: calc(50%-10px);
+}
+
+.col-3 {
+  flex-basis: calc(33.33333%-13.333px);
+}

@@ -1,4 +1,4 @@
-import Banners from "./Banners";
+import Banners from "./banners/Banners";
 
 
 
