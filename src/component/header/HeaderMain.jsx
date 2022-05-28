@@ -34,7 +34,7 @@ const HeaderMain = () => {
         <div className="search-box flex flex-1 items-center  max-w-[420px] ">
           <input
             type="search"
-            className="h-[42px] w-[100%] shadow-gray-300 shadow-inner px-4 hover:shadow-none rounded-l-[5px]"
+            className="h-[42px] w-[100%] shadow-gray-300 shadow-inner px-4 hover:shadow-none focus:shadow-none rounded-l-[5px] outline-none"
             placeholder="Tìm kiếm sản phẩm"
             autoComplete="off"
           />

@@ -39,7 +39,7 @@ const AdsSlider = () => {
   useEffect(() => {
     console.log('fetching...');
     fetch(
-      "https://scors-anywhere.herokuapp.com/https://divineshop.vn/api/header/news"
+      "https://cors-anywhere.herokuapp.com/https://divineshop.vn/api/header/news"
     )
       .then((res) => res.json())
       .then((ads) => {
