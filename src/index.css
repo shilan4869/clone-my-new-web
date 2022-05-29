@@ -26,10 +26,11 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu",
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vw;
 }
 
 code {
@@ -48,16 +49,68 @@ code {
   max-width: 1200px;
   align-items: center;
   gap: 20px;
+  
 }
 
 .col-4 {
-  flex-basis: calc(25%-15px);
+  flex-basis: calc(25% - 15px);
 }
 
 .col-2 {
-  flex-basis: calc(50%-10px);
+  flex-basis: calc(50% - 10px);
 }
 
 .col-3 {
-  flex-basis: calc(33.33333%-13.333px);
+  flex-basis: calc(33.33333% - 13.333px);
+}
+
+#root {
+  height: 100%;
+}
+
+.price {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-weight: 500;
+  align-items: center;
+}
+
+.product-link {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 3rem;
+}
+
+.standard-price {
+  opacity: .7;
+  text-decoration-line: line-through;
+}
+
+.discount-percent {
+  background-color: #dc3545;
+  padding: 1px 4px;
+  border-radius: 5px;
+  color: white;
+}
+
+.products-section-heading {
+  line-height: 1.75rem;
+  font-size: 1.25rem;
+  display: inline-block;
+}
+
+.products-section-description {
+  display: flex;
+  width: 100%;
+  font-size: 0.85rem;
+  margin-top: -18px;
+  opacity: .9;
+}
+
+.top-sellers {
+  clear:both;
+  background: #000d21 url('https://divineshop.vn/static/0de2668c294edf9d5fd8a8647b2c65b6.png') no-repeat left bottom;
+  background-position: top;
+
 }

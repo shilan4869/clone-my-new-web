@@ -6,7 +6,7 @@ const ThirdBanner = ({ banners }) => {
   }
 
   return (
-    <div className="container flex-wrap md:flex-nowrap">
+    <div className="container flex-wrap md:flex-nowrap ">
       <a
         href={
           banners[2].href.includes("http")

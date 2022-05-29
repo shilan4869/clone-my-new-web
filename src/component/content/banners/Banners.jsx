@@ -2,7 +2,7 @@ import Menu from "./menu/Menu"
 import SecondBanner from "./secondbanner/SecondBanner"
 import ThirdBanner from "./thirdbanner/ThirdBanner"
 import MainSlide from "./slide/MainSlide"
-import { useEffect, useState } from "react"
+import { memo, useEffect, useState } from "react"
 
 const bannerAPI = 'https://cors-anywhere.herokuapp.com/https://divineshop.vn/api/home/banners'
 const Banners = () => {
@@ -16,9 +16,8 @@ const Banners = () => {
       })
     },[])
     
-    console.log('Banners: ', banners);
   return (
-    <div className="container !justify-start flex-col h-full max-h-[506px]">
+    <div className="container !justify-start flex-col py-[21px]">
       <div className="container flex-col  lg:flex-row ">
         <Menu/>
         <MainSlide/>
@@ -29,4 +28,4 @@ const Banners = () => {
   )
 }
 
-export default Banners
+export default memo(Banners)

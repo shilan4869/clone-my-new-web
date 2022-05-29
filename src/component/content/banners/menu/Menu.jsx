@@ -7,7 +7,6 @@ const Menu = () => {
     fetch(myApi)
       .then((res) => res.json())
       .then((data) => {
-          console.log('Menu: ',data);
         const newMenu = data.list.map((v, i) => 
         <a 
         href={"https://divineshop.vn" + v.href} 

@@ -37,7 +37,6 @@ const AdsSlider = () => {
 
   //USE https://scors-anywhere.herokuapp.com TO BYPASS CORS
   useEffect(() => {
-    console.log('fetching...');
     fetch(
       "https://cors-anywhere.herokuapp.com/https://divineshop.vn/api/header/news"
     )

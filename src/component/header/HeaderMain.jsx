@@ -17,7 +17,7 @@ const HeaderMain = () => {
           <HiOutlineMenu className=" w-[2.2rem] h-[2.2rem] " />
         </div>
 
-        <div className="company hidden lg:flex flex-none basis-[175px]">
+        <div className="company hidden lg:flex flex-none basis-[165px]">
           <a
             href="https://divineshop.vn"
             className=" flex flex-none basis-[100%] items-center justify-between"

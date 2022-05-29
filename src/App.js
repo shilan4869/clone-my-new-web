@@ -5,7 +5,7 @@ import SideBanners from "./component/sidebanners/SideBanners"
 
 function App() {
   return (
-    <div className="relative">
+    <div className="h-full">
       <Header />
       <Content />
       <SideBanners/>
