@@ -38,6 +38,8 @@ code {
     monospace;
 }
 
+
+
 .ads {
   -webkit-animation: image_blur_in .5s;
 }
@@ -97,7 +99,7 @@ code {
 .products-section-heading {
   line-height: 1.75rem;
   font-size: 1.25rem;
-  display: inline-block;
+  display: flex;
 }
 
 .products-section-description {

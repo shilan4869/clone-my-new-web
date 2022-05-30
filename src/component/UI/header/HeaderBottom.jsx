@@ -2,7 +2,7 @@ import { HiOutlineMenu } from "react-icons/hi"
 
 const HeaderBottom = () => {
   return (
-    <div className="hidden lg:flex items-center justify-center bg-white h-[52.5px] text-gray-700 px-[20px] text-[0.85rem]">
+    <div className="hidden lg:flex items-center justify-center bg-white h-[52.5px] text-gray-700 px-[20px] text-[0.85rem] w-full">
       <div className="container ">
         <button className="portfolio flex justify-between items-center cursor-pointer">
           <HiOutlineMenu className="p-0 w-[22px] h-[22px]" />

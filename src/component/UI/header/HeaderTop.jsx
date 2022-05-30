@@ -3,7 +3,7 @@ import { memo } from "react"
 
 const HeaderTop = () => {
   return (
-    <div className="hidden lg:flex px-[20px] bg-blue-700 h-[42px] items-center justify-center text-sm ">
+    <div className="hidden lg:flex px-[20px] bg-blue-700 h-[42px] items-center justify-center text-sm w-full">
       <div className="container">
 
           <AdsSlider/>

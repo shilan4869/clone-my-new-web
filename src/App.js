@@ -1,7 +1,7 @@
 import "./App.css"
-import Header from "./component/header/Header"
-import Content from "./component/content/Content"
-import SideBanners from "./component/sidebanners/SideBanners"
+import Header from "./component/UI/header/Header"
+import Content from "./component/UI/content/Content"
+import SideBanners from "./component/UI/sidebanners/SideBanners"
 
 function App() {
   return (

@@ -11,7 +11,7 @@ import { FaCreditCard } from "react-icons/fa"
 
 const HeaderMain = () => {
   return (
-    <div className="h-[77px] lg:h-[122.5px] px-[20px] py-[8px] bg-[#2579f2] flex items-between justify-center text-sm flex-wrap">
+    <div className="h-[77px] lg:h-[122.5px] px-[20px] py-[8px] bg-[#2579f2] flex flex-col items-center justify-around text-sm">
       <div className="container">
         <div className="hamburger-menu cursor-pointer lg:hidden ">
           <HiOutlineMenu className=" w-[2.2rem] h-[2.2rem] " />

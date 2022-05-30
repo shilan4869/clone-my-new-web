@@ -10,7 +10,7 @@ const Menu = () => {
         const newMenu = data.list.map((v, i) => 
         <a 
         href={"https://divineshop.vn" + v.href} 
-        className="flex items-center flex-grow rounded-[3px] pl-2 hover:bg-gray-100 cursor-pointer max-h-[30px]"
+        className="flex items-center flex-grow rounded-[3px] pl-2 hover:bg-gray-100 cursor-pointer "
         key={i}>
             <img src={"https://cdn.divineshop.vn" + v.icon} 
             loading="lazy"
