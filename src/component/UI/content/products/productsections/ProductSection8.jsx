@@ -49,7 +49,7 @@ const ProductSection8 = ({ productsAPI }) => {
               className="product-img flex flex-col gap-[10px] col-2 md:basis-[calc(33.33333%-13.333px)] lg:basis-[calc(25%-15px)]"
               key={v.id}
             >
-              <a href={"https://divineshop.vn/" + v.slug}>
+              <a href={"https://divineshop.vn/" + v.slug} className="relative pb-[calc(10/21*100%)]">
                 <img
                   src={
                     v.image.includes("http")
@@ -57,7 +57,7 @@ const ProductSection8 = ({ productsAPI }) => {
                       : "https://divineshop.vn" + v.image || defaultURL
                   }
                   alt=""
-                  className="rounded-[5px]"
+                  className="absolute rounded-[5px] w-full h-full"
                 />
               </a>
               <a
