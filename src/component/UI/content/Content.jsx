@@ -4,14 +4,24 @@ import TrendingProducts from "./products/TrendingProducts"
 import { HiTrendingUp } from "react-icons/hi"
 import TopSellers from "./products/TopSellers"
 import SteamGames from "./products/SteamGames"
+import Applications from "./products/Applications"
+import CodeWallet from "./products/CodeWallet"
+import DataMobile from "./products/DataMobile"
 
 let featuredIndex = 1,
   topSellerIndex = 1,
-  steamGamesIndex = 1
+  steamGamesIndex = 1,
+  applicationsIndex = 1,
+  codeWalletIndex = 1,
+  dataMobileIndex = 1
+
 const Content = () => {
   const [featuredProductsAPI, setFeaturedProductsAPI] = useState("")
   const [topSellerAPI, setTopSellerAPI] = useState("")
   const [steamGamesAPI, setSteamGamesAPI] = useState("")
+  const [applicationsAPI, setApplicationsAPI] = useState("")
+  const [codeWalletAPI, setCodeWalletAPI] = useState("")
+  const [dataMobileAPI, setDataMobileAPI] = useState("")
 
   const loadMoreFeaturedProducts = () => {
     featuredIndex = featuredIndex + 1
@@ -39,11 +49,37 @@ const Content = () => {
     )
   }
 
+  const loadMoreApplications = () => {
+    applicationsIndex = applicationsIndex + 1
+    setApplicationsAPI(
+      "https://cors-anywhere.herokuapp.com/https://divineshop.vn/api/product/list?page=" +
+        applicationsIndex +
+        "&slug=application"
+    )
+  }
+
+  const loadMoreCodeWallet = () => {
+    codeWalletIndex = codeWalletIndex + 1
+    setCodeWalletAPI(
+      "https://cors-anywhere.herokuapp.com/https://divineshop.vn/api/product/list?page=" +
+        codeWalletIndex +
+        "&slug=code-wallet"
+    )
+  }
+  
+  const loadMoreDataMobile = () => {
+    dataMobileIndex = dataMobileIndex + 1
+    setDataMobileAPI(
+      "https://cors-anywhere.herokuapp.com/https://divineshop.vn/api/product/list?page=" +
+        dataMobileIndex +
+        "&slug=data-mobile"
+    )
+  }
   return (
     <div className="content flex flex-col justify-start items-center bg-gray-100 border-t-[1px]">
       <div className="flex flex-col justify-start items-center w-full px-[21px]">
         <Banners />
-        {/* Trending Products */}
+        {/* Featured Products */}
         <div className="trending-products flex flex-col items-center w-full">
           <div className="container mt-[1rem] w-full flex-col ">
             <div className="header flex w-full justify-between font-[600]">
@@ -76,7 +112,7 @@ const Content = () => {
             </div>
           </div>
         </div>
-        {/* production tags */}
+        {/* Trending*/}
         <div className="keywords container flex-col w-full !items-start  font-[600] mb-4">
           <div className="products-section-heading mt-8">Từ khóa nổi bật</div>
           <nav className="w-full flex flex-wrap items-center justify-between text-white">
@@ -136,7 +172,7 @@ const Content = () => {
           </nav>
         </div>
       </div>
-      {/* Top sellers */}
+      {/* Steam */}
       <div className="flex flex-col justify-start items-center px-[21px] top-sellers w-full pt-[10rem] pb-[3rem] text-white">
         <div className="top-seller flex flex-col items-center w-full">
           <div className="container mt-[1rem] w-full flex-col ">
@@ -171,100 +207,190 @@ const Content = () => {
         </div>
       </div>
       <div className="flex flex-col h-full justify-start items-center bg-gray-100 border-t-[1px] w-full">
-      <div className="flex flex-col justify-start items-center w-full px-[21px]">
-        {/* Price range */}
-        <div className="price-ranges container flex-col w-full !items-start  font-[600] mb-4">
-          <div className="products-section-heading mt-8">Giá phù hợp</div>
-          <nav className="w-full flex flex-wrap items-center justify-between ">
-            <div className="flex basis-[30%] md:basis-[15%] mb-[20px]">
-              <a
-                href="#"
-                className="flex justify-center w-full py-[15%] bg-white rounded-[5px] active:scale-95 border-gray-200 border-[1px]"
-              >
-                20.000đ
-              </a>
-            </div>
+        <div className="flex flex-col justify-start items-center w-full px-[21px]">
+          {/* Price range */}
+          <div className="price-ranges container flex-col w-full !items-start  font-[600] mb-4">
+            <div className="products-section-heading mt-8">Giá phù hợp</div>
+            <nav className="w-full flex flex-wrap items-center justify-between ">
+              <div className="flex basis-[30%] md:basis-[15%] mb-[20px]">
+                <a
+                  href="#"
+                  className="flex justify-center w-full py-[15%] bg-white rounded-[5px] active:scale-95 border-gray-200 border-[1px]"
+                >
+                  20.000đ
+                </a>
+              </div>
 
-            <div className="flex basis-[30%] md:basis-[15%] mb-[20px]">
-              <a
-                href="#"
-                className="flex justify-center w-full py-[15%] bg-white rounded-[5px] active:scale-95 border-gray-200 border-[1px]"
-              >
-                50.000đ
-              </a>
-            </div>
+              <div className="flex basis-[30%] md:basis-[15%] mb-[20px]">
+                <a
+                  href="#"
+                  className="flex justify-center w-full py-[15%] bg-white rounded-[5px] active:scale-95 border-gray-200 border-[1px]"
+                >
+                  50.000đ
+                </a>
+              </div>
 
-            <div className="flex basis-[30%] md:basis-[15%] mb-[20px]">
-              <a
-                href="#"
-                className="flex justify-center w-full py-[15%] bg-white rounded-[5px] active:scale-95 border-gray-200 border-[1px]"
-              >
-                100.000đ
-              </a>
-            </div>
+              <div className="flex basis-[30%] md:basis-[15%] mb-[20px]">
+                <a
+                  href="#"
+                  className="flex justify-center w-full py-[15%] bg-white rounded-[5px] active:scale-95 border-gray-200 border-[1px]"
+                >
+                  100.000đ
+                </a>
+              </div>
 
-            <div className="flex basis-[30%] md:basis-[15%] mb-[20px]">
-              <a
-                href="#"
-                className="flex justify-center w-full py-[15%] bg-white rounded-[5px] active:scale-95 border-gray-200 border-[1px]"
-              >
-                200.000đ
-              </a>
-            </div>
+              <div className="flex basis-[30%] md:basis-[15%] mb-[20px]">
+                <a
+                  href="#"
+                  className="flex justify-center w-full py-[15%] bg-white rounded-[5px] active:scale-95 border-gray-200 border-[1px]"
+                >
+                  200.000đ
+                </a>
+              </div>
 
-            <div className="flex basis-[30%] md:basis-[15%] mb-[20px]">
-              <a
-                href="#"
-                className="flex justify-center w-full py-[15%] bg-white rounded-[5px] active:scale-95 border-gray-200 border-[1px]"
-              >
-                500.000đ
-              </a>
-            </div>
+              <div className="flex basis-[30%] md:basis-[15%] mb-[20px]">
+                <a
+                  href="#"
+                  className="flex justify-center w-full py-[15%] bg-white rounded-[5px] active:scale-95 border-gray-200 border-[1px]"
+                >
+                  500.000đ
+                </a>
+              </div>
 
-            <div className="flex basis-[30%] md:basis-[15%] mb-[20px]">
-              <a
-                href="#"
-                className="flex justify-center w-full py-[15%] bg-white rounded-[5px] active:scale-95 border-gray-200 border-[1px]"
-              >
-                1.000.000đ
-              </a>
-            </div>
-          </nav>
-        </div>
-        {/* Game on Steam */}
-        <div className="trending-products flex flex-col items-center w-full">
-          <div className="container mt-[1rem] w-full flex-col ">
-            <div className="header flex w-full justify-between font-[600]">
-              <div className="products-section-heading">Game trên Steam</div>
-              <a
-                href="https://divineshop.vn/search/steam"
-                className="bg-[#2579f2] px-[20px] py-[5px] leading-7 rounded-[5px] text-[0.8rem] text-white hover:brightness-110 border-[1px] hover:border-[#2579f2] active:border-[#2579f2]"
-              >
-                Khám phá
-              </a>
-            </div>
+              <div className="flex basis-[30%] md:basis-[15%] mb-[20px]">
+                <a
+                  href="#"
+                  className="flex justify-center w-full py-[15%] bg-white rounded-[5px] active:scale-95 border-gray-200 border-[1px]"
+                >
+                  1.000.000đ
+                </a>
+              </div>
+            </nav>
+          </div>
+          {/* Game on Steam */}
+          <div className="trending-products flex flex-col items-center w-full">
+            <div className="container mt-[1rem] w-full flex-col ">
+              <div className="header flex w-full justify-between font-[600]">
+                <div className="products-section-heading">Game trên Steam</div>
+                <a
+                  href="https://divineshop.vn/search/steam"
+                  className="bg-[#2579f2] px-[20px] py-[5px] leading-7 rounded-[5px] text-[0.8rem] text-white hover:brightness-110 border-[1px] hover:border-[#2579f2] active:border-[#2579f2]"
+                >
+                  Khám phá
+                </a>
+              </div>
 
-            <div className="products-section-description">
-            Những trò chơi được đánh giá tốt, nội dung hấp dẫn thu hút đang chờ bạn
+              <div className="products-section-description">
+                Những trò chơi được đánh giá tốt, nội dung hấp dẫn thu hút đang
+                chờ bạn
+              </div>
+              {/* Trending Products */}
+              <SteamGames
+                steamGamesAPI={
+                  steamGamesAPI ||
+                  "https://cors-anywhere.herokuapp.com/https://divineshop.vn/api/product/list?slug=steam"
+                }
+              />
+              <div className="end-trending-product w-full pb-[15px] text-center border-b-[1px] border-gray-300">
+                <button
+                  className="text-[#2579f2] font-[500] text-[0.9rem]"
+                  onClick={loadMoreSteamGames}
+                >
+                  Xem thêm
+                </button>
+              </div>
             </div>
-            {/* Trending Products */}
-            <SteamGames
-              steamGamesAPI={
-                steamGamesAPI ||
-                "https://cors-anywhere.herokuapp.com/https://divineshop.vn/api/product/list?slug=steam"
-              }
-            />
-            <div className="end-trending-product w-full pb-[15px] text-center border-b-[1px] border-gray-300">
-              <button
-                className="text-[#2579f2] font-[500] text-[0.9rem]"
-                onClick={loadMoreSteamGames}
-              >
-                Xem thêm
-              </button>
+          </div>
+          {/* Application */}
+          <div className="applications flex flex-col items-center w-full">
+            <div className="container mt-[1rem] w-full flex-col ">
+              <div className="header flex w-full justify-between font-[600]">
+                <div className="products-section-heading">
+                  Ứng dụng tiện lợi
+                </div>
+                <a
+                  href="https://divineshop.vn/search/application"
+                  className="bg-[#2579f2] px-[20px] py-[5px] leading-7 rounded-[5px] text-[0.8rem] text-white hover:brightness-110 border-[1px] hover:border-[#2579f2] active:border-[#2579f2]"
+                >
+                  Khám phá
+                </a>
+              </div>
+
+              <Applications
+                applicationsAPI={
+                  applicationsAPI ||
+                  "https://cors-anywhere.herokuapp.com/https://divineshop.vn/api/product/list?slug=application"
+                }
+              />
+              <div className="applications-product w-full pb-[15px] text-center border-b-[1px] border-gray-300">
+                <button
+                  className="text-[#2579f2] font-[500] text-[0.9rem]"
+                  onClick={loadMoreApplications}
+                >
+                  Xem thêm
+                </button>
+              </div>
+            </div>
+          </div>
+          {/* Code Wallet */}
+          <div className="code-wallet flex flex-col items-center w-full">
+            <div className="container mt-[1rem] w-full flex-col ">
+              <div className="header flex w-full justify-between font-[600]">
+                <div className="products-section-heading">Code Wallet</div>
+                <a
+                  href="https://divineshop.vn/search/code-wallet"
+                  className="bg-[#2579f2] px-[20px] py-[5px] leading-7 rounded-[5px] text-[0.8rem] text-white hover:brightness-110 border-[1px] hover:border-[#2579f2] active:border-[#2579f2]"
+                >
+                  Khám phá
+                </a>
+              </div>
+
+              <CodeWallet
+                codeWalletAPI={
+                  codeWalletAPI ||
+                  "https://cors-anywhere.herokuapp.com/https://divineshop.vn/api/product/list?slug=code-wallet"
+                }
+              />
+              <div className="applications-product w-full pb-[15px] text-center border-b-[1px] border-gray-300">
+                <button
+                  className="text-[#2579f2] font-[500] text-[0.9rem]"
+                  onClick={loadMoreCodeWallet}
+                >
+                  Xem thêm
+                </button>
+              </div>
+            </div>
+          </div>
+          {/* Data Mobile */}
+          <div className="data-mobile flex flex-col items-center w-full">
+            <div className="container mt-[1rem] w-full flex-col ">
+              <div className="header flex w-full justify-between font-[600]">
+                <div className="products-section-heading">Data điện thoại</div>
+                <a
+                  href="https://divineshop.vn/search/data-mobile"
+                  className="bg-[#2579f2] px-[20px] py-[5px] leading-7 rounded-[5px] text-[0.8rem] text-white hover:brightness-110 border-[1px] hover:border-[#2579f2] active:border-[#2579f2]"
+                >
+                  Khám phá
+                </a>
+              </div>
+
+              <DataMobile
+                dataMobileAPI={
+                  dataMobileAPI ||
+                  "https://cors-anywhere.herokuapp.com/https://divineshop.vn/api/product/list?slug=data-mobile"
+                }
+              />
+              <div className="applications-product w-full pb-[15px] text-center border-b-[1px] border-gray-300">
+                <button
+                  className="text-[#2579f2] font-[500] text-[0.9rem]"
+                  onClick={loadMoreDataMobile}
+                >
+                  Xem thêm
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   )
